@@ -32,7 +32,7 @@
     padding-right: calc(#{$pd} * 2);
     transition: visibility, opacity $animate-duration-effect ease;
 
-    &._active {
+    &.active {
       opacity: 1;
       visibility: visible;
     }
@@ -156,12 +156,12 @@
   }
 
   &__close,
-  &._active .menu-btn__open {
+  &.active .menu-btn__open {
     opacity: 0;
     visibility: hidden;
   }
 
-  &._active .menu-btn__close {
+  &.active .menu-btn__close {
     opacity: 1;
     visibility: visible;
   }

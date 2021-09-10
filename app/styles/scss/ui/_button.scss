@@ -10,6 +10,7 @@
   font-weight: 500;
   width: 100%;
   position: relative;
+  text-decoration: none;
 
   @include for-size(phone-up) {
     height: 60px;

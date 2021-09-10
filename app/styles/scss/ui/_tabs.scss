@@ -1,0 +1,95 @@
+.tabs {
+
+  &__btns {
+    @include flex(flex, null, null);
+    overflow-x: auto;
+
+    @include for-size(tablet-portrait-up) {
+      overflow-x: hidden;
+    }
+  }
+
+  &__btn {
+    background-color: $c-tab;
+    position: relative;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $c-white-text;
+    font-size: rem(14);
+    line-height: rem(16);
+    padding: 0 $pd;
+    min-width: 135px;
+
+    @include for-size(tablet-portrait-up) {
+      min-width: initial;
+    }
+
+    &:not(:last-child) {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        border-left: 3px dashed $c-tab-border;
+      }
+    }
+
+    &.active {
+      background-color: $c-tab-active;
+      color: $c-secondary-text;
+
+      &:before {
+        border: 3px dashed $c-tab-border-active;
+        left: 0;
+      }
+    }
+
+    &:first-child {
+      border-top-left-radius: $br;
+      border-bottom-left-radius: $br;
+
+      &:before {
+        border-top-left-radius: $br;
+        border-bottom-left-radius: $br;
+      }
+    }
+
+    &:last-child {
+      border-top-right-radius: $br;
+      border-bottom-right-radius: $br;
+
+      &:before {
+        border-top-right-radius: $br;
+        border-bottom-right-radius: $br;
+      }
+    }
+  }
+
+  &__content {
+    @include dashed-back;
+    margin-top: 16px;
+    padding: 52px;
+    border-radius: $br;
+    font-size: rem(16);
+    line-height: rem(24);
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    font-size: rem(24);
+    line-height: rem(28);
+    color: $c-primary-text;
+  }
+
+  &__link {
+    margin-top: 30px;
+  }
+}
