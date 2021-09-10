@@ -8,3 +8,27 @@
   align-items: $align;
   justify-content: $justify;
 }
+
+@mixin bubble($width-m, $height-m, $width-d, $height-d) {
+  position: absolute;
+  font-family: "Verveine", sans-serif;
+  font-size: rem(20);
+  line-height: rem(24);
+  color: #0A0A0A;
+  width: $width-m +px;
+  height: $height-m +px;
+  text-align: center;
+  padding-left: calc(#{$pd} * 5);
+  padding-right: calc(#{$pd} * 5);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  @include flex(flex, center, center);
+
+  @include for-size(tablet-portrait-up) {
+    font-size: rem(24);
+    line-height: rem(24);
+    width: $width-d +px;
+    height: $height-d +px;
+  }
+}
