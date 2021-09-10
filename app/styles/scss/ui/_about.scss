@@ -1,11 +1,12 @@
 .about {
   padding-top: 65px;
   padding-bottom: 65px;
-  margin-bottom: 100px;
+  margin-bottom: 175px;
 
   @include for-size(tablet-portrait-up) {
     padding-top: 80px;
-    padding-bottom: 110px;
+    padding-bottom: 65px;
+    margin-bottom: 100px;
   }
 
   &:before, &:after {
@@ -47,7 +48,7 @@
       width: 60%;
       position: absolute;
       right: 0;
-      bottom: -340px;
+      bottom: -300px;
       z-index: 1;
       padding-left: 0;
       margin-top: 0;
@@ -73,7 +74,7 @@
     right: 0;
 
     @include for-size(tablet-portrait-up) {
-      bottom: -160px;
+      bottom: -130px;
       right: 55%;
     }
   }

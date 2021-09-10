@@ -1,11 +1,4 @@
 .about-package {
-  padding-top: 55px;
-  padding-bottom: 65px;
-
-  @include for-size(tablet-portrait-up) {
-    padding-bottom: 110px;
-  }
-
   &__inner {
     @include for-size(tablet-portrait-up) {
       @include flex(flex, null, null);
