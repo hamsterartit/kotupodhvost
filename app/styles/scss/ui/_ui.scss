@@ -42,6 +42,10 @@
         @include for-size(tablet-landscape-up) {
             width: 60%;
             margin-bottom: 80px;
+
+            &--full {
+                width: 75%;
+            }
         }
     }
 

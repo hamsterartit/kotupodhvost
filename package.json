@@ -45,6 +45,7 @@
     "imask": "^6.1.0",
     "js-cookie": "^3.0.0",
     "sass": "^1.36.0",
+    "swiper": "^7.0.5",
     "webpack": "^5.48.0",
     "webpack-stream": "^6.1.2"
   },

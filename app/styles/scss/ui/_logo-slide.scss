@@ -1,0 +1,13 @@
+.logo-slide {
+  @include dashed-back;
+  border-radius: $br;
+  @include flex(flex, center, center);
+  width: 136px;
+  height: 72px;
+  padding: $pd calc(#{$pd} * 2);
+
+  @include for-size(tablet-portrait-up) {
+    width: 220px;
+    height: 112px;
+  }
+}

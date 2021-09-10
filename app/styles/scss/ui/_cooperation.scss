@@ -1,4 +1,8 @@
 .cooperation {
+  @include for-size(tablet-portrait-up) {
+    margin-bottom: 200px;
+  }
+
   &__inner {
     @include for-size(tablet-portrait-up) {
       @include flex(flex, null, null);
