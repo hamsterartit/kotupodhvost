@@ -1,12 +1,12 @@
 .banner {
   height: calc(100vh - 72px);
-  padding-bottom: calc(#{$pd} * 9);
-  padding-top: calc(#{$pd} * 3);
+  padding-bottom: 45px;
+  padding-top: 15px;
 
   @include for-size(tablet-landscape-up) {
     height: calc(100vh - 88px);
-    padding-top: calc(#{$pd} * 6);
-    padding-bottom: calc(#{$pd} * 12);
+    padding-top: 30px;
+    padding-bottom: 60px;
   }
 
   &__inner {
@@ -43,8 +43,8 @@
     @include for-size(tablet-portrait-up) {
       font-size: rem(28);
       line-height: rem(32);
-      margin-bottom: calc(#{$mg} * 22);
-      margin-top: calc(#{$mg} * 9);
+      margin-bottom: 88px;
+      margin-top: 36px;
     }
   }
 

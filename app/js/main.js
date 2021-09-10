@@ -40,11 +40,6 @@ $(document).ready(function () {
     $(window).on('load', checkWatchedElements);
     checkWatchedElements();
 
-    $(".in-view-watcher").each((i, item) => {
-        console.log(i);
-        $(item).css("animation-delay", 0.3 * (i + 1) + "s");
-    });
-
 
     $('.js-nav-btn').click(function () {
         $(this).toggleClass('active');

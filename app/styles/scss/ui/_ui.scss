@@ -4,17 +4,17 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    padding-left: calc(#{$pd} * 3);
-    padding-right: calc(#{$pd} * 3);
+    padding-left: 15px;
+    padding-right: 15px;
 
     @include for-size(tablet-landscape-up) {
-        padding-left: calc(#{$pd} * 12);
-        padding-right: calc(#{$pd} * 12);
+        padding-left: 60px;
+        padding-right: 60px;
     }
 
     @include for-size(desktop-up) {
-        padding-left: calc(#{$pd} * 24);
-        padding-right: calc(#{$pd} * 24);
+        padding-left: 120px;
+        padding-right: 120px;
     }
 }
 
@@ -32,7 +32,6 @@
     padding-bottom: 45px;
 
     @include for-size(tablet-portrait-up) {
-        padding-top: 45px;
         padding-bottom: 75px;
     }
 
@@ -51,7 +50,7 @@
 
     &__title {
         font-size: rem(40);
-        line-height: rem(56);
+        line-height: rem(48);
         color: $c-primary-text;
         margin-top: 0;
 
@@ -61,6 +60,7 @@
 
         @include for-size(tablet-landscape-up) {
             font-size: rem(56);
+            line-height: rem(56);
         }
     }
 

@@ -28,9 +28,9 @@
     right: 0;
     bottom: 0;
     flex-direction: column;
-    padding-left: calc(#{$pd} * 6);
-    padding-right: calc(#{$pd} * 6);
-    padding-top: calc(#{$pd} * 3);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
     transition: visibility, opacity $animate-duration-effect ease;
 
     &.active {
@@ -59,8 +59,8 @@
     font-size: rem(18);
     text-align: center;
     position: relative;
-    padding-top: calc(#{$pd} * 6);
-    padding-bottom: calc(#{$pd} * 6);
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     @include for-size(tablet-portrait-up) {
       text-align: left;
