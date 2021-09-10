@@ -3,9 +3,14 @@ a {
 }
 
 .contact-link {
-  font-size: rem(24);
+  font-size: rem(22);
   color: $c-contact-link;
   text-decoration: none;
+  font-weight: 500;
+
+  @include for-size(tablet-portrait-up) {
+    font-size: rem(24);
+  }
 
   &:hover {
     color: $c-link-hover;
