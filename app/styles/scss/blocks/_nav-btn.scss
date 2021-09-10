@@ -1,0 +1,47 @@
+$nav-btn: #000;
+
+.nav-btn {
+	height: 11px;
+	position: relative;
+	width: 18px;
+
+	&._active {
+		height: 18px;
+	}
+
+	span {
+		background-color: $nav-btn;
+		height: 1px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		transition: transform $animate-duration-effect ease;
+
+		&:first-child {
+			top: 0;
+
+			.nav-btn._active & {
+				top: 8px;
+				transform: rotate(-45deg);
+			}
+		}
+
+		&:nth-child(2) {
+			top: 5px;
+
+			.nav-btn._active & {
+				opacity: 0;
+			}
+		}
+
+		&:last-child {
+			top: 10px;
+
+			.nav-btn._active & {
+				background-color: var(--mobile-btn-active-color);
+				top: 8px;
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

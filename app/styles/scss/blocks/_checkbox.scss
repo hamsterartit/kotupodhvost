@@ -1,0 +1,38 @@
+.check {
+  display: inline-flex;
+  align-items: center;
+
+  &__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  &__box {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: inline-block;
+    margin-inline-end: 10px;
+
+    .check__input:checked+& {
+      background-color: red;
+    }
+
+    .check__input:focus+& {
+      border-color: grey;
+    }
+
+    .check__input:disabled+& {
+      background-color: grey;
+    }
+
+    .check__input:checked:disabled+& {}
+  }
+}

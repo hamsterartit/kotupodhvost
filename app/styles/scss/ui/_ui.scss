@@ -1,0 +1,94 @@
+.container {
+    width: 100%;
+    max-width: $container-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-left: $pd;
+    padding-right: $pd;
+
+    @include for-size(tablet-landscape-up) {
+        padding-left: calc(#{$pd} * 4);
+        padding-right: calc(#{$pd} * 4);
+    }
+
+    @include for-size(desktop-up) {
+        padding-left: calc(#{$pd} * 8);
+        padding-right: calc(#{$pd} * 8);
+    }
+}
+
+.logo {
+    display: inline-flex;
+    width: 205px;
+
+    @include for-size(tablet-landscape-up) {
+        width: 240px;
+    }
+}
+
+.section-heading {
+    margin-bottom: 30px;
+
+    @include for-size(tablet-landscape-up) {
+        width: 60%;
+        margin-bottom: 80px;
+    }
+}
+
+.section-title {
+    font-size: rem(40);
+    line-height: rem(56);
+    color: $c-primary-text;
+    margin-top: 0;
+
+    @include for-size(tablet-landscape-up) {
+        font-size: rem(56);
+    }
+}
+
+.section-subtitle {
+    padding-right: 20%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.ibg {
+    position: relative;
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+
+
+._nobr {
+    white-space: nowrap;
+}
+
+._overflow-hid {
+    overflow: hidden;
+    // Fix for safari
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

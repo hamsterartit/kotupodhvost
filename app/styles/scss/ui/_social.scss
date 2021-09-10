@@ -1,0 +1,19 @@
+.social {
+  &__title {
+    font-size: rem(16);
+    line-height: rem(20);
+    margin-bottom: $mg;
+    margin-top: 0;
+    font-weight: 400;
+  }
+
+  &__items {
+    @include flex(inline-flex, null, null);
+    gap: $mg;
+  }
+
+  &__link {
+    width: 32px;
+    height: 32px;
+  }
+}

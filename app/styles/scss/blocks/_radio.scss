@@ -1,0 +1,40 @@
+.radio {
+  display: inline-flex;
+  align-items: center;
+
+  &__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  &__box {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    margin-inline-end: 10px;
+
+    .radio__input:checked + & {
+      background-color: red;
+    }
+
+    .radio__input:focus + & {
+
+    }
+
+    .radio__input:disabled + & {
+      border-color: grey;
+    }
+
+    .radio__input:checked:disabled + & {
+      background-color: grey;
+    }
+  }
+}

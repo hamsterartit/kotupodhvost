@@ -1,0 +1,10 @@
+@mixin dashed-back() {
+  border: 3px dashed $c-border;
+  background-color: $c-dashed-back;
+}
+
+@mixin flex($flex, $align, $justify) {
+  display: $flex;
+  align-items: $align;
+  justify-content: $justify;
+}

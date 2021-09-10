@@ -1,0 +1,13 @@
+a {
+  transition: color $animate-duration-effect ease;
+}
+
+.contact-link {
+  font-size: rem(24);
+  color: $c-contact-link;
+  text-decoration: none;
+
+  &:hover {
+    color: $c-link-hover;
+  }
+}

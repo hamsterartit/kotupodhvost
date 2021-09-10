@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: $fz-d +px;
+}
+
+body {
+  color: $c-secondary-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: rem(16);
+  line-height: rem(24);
+  background-image: url("../img/back.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+
+  @include for-size(tablet-landscape-up) {
+    font-size: 1rem;
+    line-height: rem(28);
+  }
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+[hidden] {
+  display: none
+}
+
+picture {
+  img {
+    display: inherit;
+    width: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  position: relative;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  margin: 0;
+  border-style: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  appearance: none;
+}
+
+main {
+  padding-top: 72px;
+
+  @include for-size(tablet-landscape-up) {
+    padding-top: 88px;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 32px;
+
+  + ul {
+    margin-top: -20px;
+  }
+}

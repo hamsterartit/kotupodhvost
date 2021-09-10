@@ -1,0 +1,22 @@
+.bubble {
+  font-family: "Verveine", sans-serif;
+  font-size: rem(20);
+  line-height: rem(24);
+  color: #0A0A0A;
+  width: 196px;
+  height: 116px;
+  text-align: center;
+  padding-left: 26px;
+  padding-right: 26px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  @include flex(flex, center, center);
+
+  @include for-size(tablet-portrait-up) {
+    font-size: rem(24);
+    line-height: rem(24);
+    width: 230px;
+    height: 138px;
+  }
+}

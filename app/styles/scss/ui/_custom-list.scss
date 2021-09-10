@@ -1,0 +1,48 @@
+.custom-list {
+  @include flex(flex, null, space-between);
+  flex-direction: column;
+  padding-bottom: 20%;
+  padding-left: 0;
+
+  &__item {
+    list-style: none;
+    position: relative;
+    padding-left: 40px;
+    font-size: rem(16);
+    line-height: rem(20);
+    font-weight: 700;
+    margin-bottom: 24px;
+
+    @include for-size(tablet-landscape-up) {
+      padding-left: 70px;
+      font-size: rem(20);
+      line-height: rem(28);
+      margin-bottom: auto;
+    }
+
+    &:before {
+      content: "";
+      background-image: url("../img/arrow-down.svg");
+      width: 35px;
+      height: 25px;
+      position: absolute;
+      left: 0;
+      display: block;
+      background-repeat: no-repeat;
+      top: 15px;
+
+      @include for-size(tablet-landscape-up) {
+        width: 60px;
+        height: 35px;
+      }
+    }
+
+    &:nth-child(n + 3):before {
+      background-image: url("../img/arrow-up.svg");
+    }
+
+    &::marker {
+     background-size: 100%;
+    }
+  }
+}
