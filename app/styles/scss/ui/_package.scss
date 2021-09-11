@@ -9,6 +9,29 @@
 .difference-slider {
   width: 100%;
   position: relative;
+
+  &__info {
+    @include dashed-back;
+    padding: 24px 32px;
+    font-size: rem(16);
+    line-height: rem(24);
+    text-align: center;
+    color: $c-primary-text;
+    margin-top: 16px;
+
+    @include for-size(tablet-portrait-up) {
+      position: absolute;
+      bottom: 56px;
+      left: 48px;
+      z-index: 6;
+      width: 40%;
+      max-width: 390px;
+      padding: 54px 32px;
+      font-size: rem(20);
+      line-height: rem(28);
+      margin-top: 0;
+    }
+  }
 }
 
 .images-compare-separator {
