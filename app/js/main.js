@@ -1,23 +1,26 @@
 /* global $ */
+import "./hammer";
+import "./jquery.images-compare.min";
 
 $(document).ready(function () {
     let watchedElements = [];
     let doc = document.documentElement;
     let currentYScroll = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    $('.in-view-watcher').each(function(i, v) {
+    $('.in-view-watcher').each(function (i, v) {
         watchedElements.push($(v));
     });
     $.fn.extend({
-        inViewWatcher: function() {
+        inViewWatcher: function () {
             watchedElements.push(this);
             return this;
         },
     });
+
     function checkWatchedElements() {
         currentYScroll = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
         let clientHeight = $(window).height();
         let newWatchedElementsList = [];
-        $.each(watchedElements, function(_, obj) {
+        $.each(watchedElements, function (_, obj) {
             if (typeof obj === 'undefined') {
                 return;
             }
@@ -36,9 +39,12 @@ $(document).ready(function () {
         });
         watchedElements = newWatchedElementsList;
     }
+
     $(window).on('scroll', checkWatchedElements);
     $(window).on('load', checkWatchedElements);
     checkWatchedElements();
+
+    $('.js-img-compare').imagesCompare();
 
 
     $('.js-nav-btn').click(function () {

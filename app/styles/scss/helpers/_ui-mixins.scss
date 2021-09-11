@@ -9,6 +9,22 @@
   justify-content: $justify;
 }
 
+@mixin icon-shadow {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px 20px #b10365;
+
+  @include for-size(tablet-portrait-up) {
+    box-shadow: 0 0 20px 28px #b10365;
+  }
+}
+
 @mixin bubble($width-m, $height-m, $width-d, $height-d) {
   position: absolute;
   font-family: "Verveine", sans-serif;
