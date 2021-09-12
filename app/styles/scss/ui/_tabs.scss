@@ -26,13 +26,16 @@
       min-width: initial;
     }
 
-    &:not(:last-child) {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:not(:first-child) {
       &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
         border-left: 3px dashed $c-tab-border;
       }
     }
@@ -43,7 +46,7 @@
 
       &:before {
         border: 3px dashed $c-tab-border-active;
-        left: 0;
+        right: 0;
       }
     }
 
@@ -66,16 +69,24 @@
         border-bottom-right-radius: $br;
       }
     }
+
+    &.active + .tabs__btn:before {
+      display: none;
+    }
   }
 
   &__content {
     @include dashed-back;
     margin-top: 16px;
-    padding: 52px;
+    padding: 40px 15px;
     border-radius: $br;
     font-size: rem(16);
     line-height: rem(24);
     display: none;
+
+    @include for-size(tablet-portrait-up) {
+      padding: 52px;
+    }
 
     &.active {
       display: block;

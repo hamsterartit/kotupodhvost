@@ -55,6 +55,17 @@ $(document).ready(function () {
         $("body").toggleClass("locked");
     });
 
+    /* Tabs */
+    $('.js-tab-btn').click(function (e) {
+        e.preventDefault();
+        const $btn = $(e.currentTarget);
+        $('.js-tab-btn').removeClass('active');
+        $('.js-tab-content').removeClass('active');
+        const $contentId = $btn.attr('id');
+        $btn.addClass('active');
+        $("[data-content-tab='" + $contentId + "']").addClass('active');
+    });
+
     /* Map */
     const place = [53.235687, 50.181100];
     ymaps.ready(function () {
