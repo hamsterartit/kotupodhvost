@@ -61,7 +61,7 @@ $(document).ready(function () {
         const map = new ymaps.Map(
             "map",
             {
-                center: [53.236076, 50.181532],
+                center: [53.235059, 50.181564],
                 zoom: 15,
                 controls: [],
             },
