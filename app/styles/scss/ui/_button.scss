@@ -24,15 +24,18 @@
 
   }
 
-  &:focus {
-
-  }
-
   &:active {
 
   }
 
   &:disabled {
-    
+    opacity: .6;
+    pointer-events: none;
+  }
+
+  &--full {
+    @include for-size(phone-up) {
+      width: 100%;
+    }
   }
 }

@@ -1,6 +1,7 @@
 /* global $ */
 import "./hammer";
 import "./jquery.images-compare.min";
+import IMask from 'imask';
 
 $(document).ready(function () {
     /* Is in view */
@@ -79,6 +80,13 @@ $(document).ready(function () {
                 spaceBetween: 24,
             },
         },
+    });
+
+    /* Phone mask */
+    $(".js-phone-field").each((i, el) => {
+        new IMask(el, {
+            mask: "+{7}-(000)-000-00-00",
+        });
     });
 
     /* Map */

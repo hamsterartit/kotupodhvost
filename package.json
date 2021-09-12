@@ -42,7 +42,7 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
-    "imask": "^6.1.0",
+    "imask": "^6.2.0",
     "js-cookie": "^3.0.0",
     "sass": "^1.36.0",
     "swiper": "^7.0.5",

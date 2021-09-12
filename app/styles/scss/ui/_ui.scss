@@ -86,18 +86,6 @@
     }
 }
 
-
-
-._nobr {
-    white-space: nowrap;
-}
-
-._overflow-hid {
-    overflow: hidden;
-    // Fix for safari
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;
