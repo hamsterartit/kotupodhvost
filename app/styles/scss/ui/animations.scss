@@ -48,6 +48,13 @@
 	}
 }
 
+.fade-in-left.is-in-view {
+	@include for-size(tablet-portrait-up) {
+		animation-duration: 0.8s;
+		animation-fill-mode: both;
+		animation-name: fadeInLeft;
+	}
+}
 
 .is-in-view {
 	animation-delay: 0.3s;

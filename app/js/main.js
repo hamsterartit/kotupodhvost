@@ -66,6 +66,21 @@ $(document).ready(function () {
         $("[data-content-tab='" + $contentId + "']").addClass('active');
     });
 
+    /* Slider */
+    new Swiper(".js-slider", {
+        spaceBetween: 16,
+        slidesPerView: "auto",
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            960: {
+                spaceBetween: 24,
+            },
+        },
+    });
+
     /* Map */
     const place = [53.235687, 50.181100];
     ymaps.ready(function () {
