@@ -12,7 +12,5 @@ a {
     font-size: rem(24);
   }
 
-  &:hover {
-    color: $c-link-hover;
-  }
+  @include link-hover;
 }

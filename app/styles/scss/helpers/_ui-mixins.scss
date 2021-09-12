@@ -1,6 +1,12 @@
-@mixin dashed-back() {
+@mixin dashed-back {
   border: 3px dashed $c-border;
   background-color: $c-dashed-back;
+}
+
+@mixin link-hover {
+  &:hover {
+    color: $c-link-hover;
+  }
 }
 
 @mixin flex($flex, $align, $justify) {
