@@ -1,4 +1,6 @@
 .about-package {
+  overflow: hidden;
+
   &__inner {
     @include for-size(tablet-portrait-up) {
       @include flex(flex, null, null);
