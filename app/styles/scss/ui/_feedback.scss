@@ -10,12 +10,8 @@
   @include dashed-back;
   border-radius: $br;
   height: auto;
-  width: 290px;
+  width: 320px;
   padding: 40px 24px;
-
-  @include for-size(phone-up) {
-    width: 320px;
-  }
 
   @include for-size(tablet-portrait-up) {
     width: 384px;

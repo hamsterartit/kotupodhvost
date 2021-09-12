@@ -89,6 +89,13 @@ $(document).ready(function () {
         });
     });
 
+    /* Form */
+    $('.js-submit').click(function (e) {
+        e.preventDefault();
+        $('.js-form-box').addClass('hidden');
+        $('.js-form-message-box').removeClass('hidden');
+    });
+
     /* Map */
     const place = [53.235687, 50.181100];
     ymaps.ready(function () {
