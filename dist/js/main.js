@@ -5906,37 +5906,39 @@ $(document).ready(function () {
   });
   /* Map */
 
-  var place = [53.235687, 50.181100];
-  ymaps.ready(function () {
-    var map = new ymaps.Map("map", {
-      center: [53.235059, 50.181564],
-      zoom: 15,
-      controls: []
-    }, {
-      suppressMapOpenBlock: true
+  if ($(".map").length) {
+    var place = [53.235687, 50.181100];
+    ymaps.ready(function () {
+      var map = new ymaps.Map("map", {
+        center: [53.235059, 50.181564],
+        zoom: 15,
+        controls: []
+      }, {
+        suppressMapOpenBlock: true
+      });
+      map.controls.remove("routeButtonControl");
+      map.controls.remove("zoomControl");
+      map.controls.remove("geolocationControl");
+      map.controls.remove("searchControl");
+      map.controls.remove("trafficControl");
+      map.controls.remove("typeSelector");
+      map.controls.remove("fullscreenControl");
+      map.controls.remove("rulerControl");
+      map.behaviors.disable(["scrollZoom"]);
+      var marker = new ymaps.Placemark(place, {
+        hintContent: ""
+      }, {
+        iconLayout: "default#image",
+        iconImageHref: "img/pin.png",
+        iconImageSize: [72, 72],
+        iconShape: {
+          type: "Rectangle",
+          coordinates: [[-25, -25], [25, 25]]
+        }
+      });
+      map.geoObjects.add(marker);
     });
-    map.controls.remove("routeButtonControl");
-    map.controls.remove("zoomControl");
-    map.controls.remove("geolocationControl");
-    map.controls.remove("searchControl");
-    map.controls.remove("trafficControl");
-    map.controls.remove("typeSelector");
-    map.controls.remove("fullscreenControl");
-    map.controls.remove("rulerControl");
-    map.behaviors.disable(["scrollZoom"]);
-    var marker = new ymaps.Placemark(place, {
-      hintContent: ""
-    }, {
-      iconLayout: "default#image",
-      iconImageHref: "img/pin.png",
-      iconImageSize: [72, 72],
-      iconShape: {
-        type: "Rectangle",
-        coordinates: [[-25, -25], [25, 25]]
-      }
-    });
-    map.geoObjects.add(marker);
-  });
+  }
 });
 
 /***/ })

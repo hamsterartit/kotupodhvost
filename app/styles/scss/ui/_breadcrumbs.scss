@@ -1,0 +1,28 @@
+.breadcrumbs {
+  position: relative;
+  white-space: nowrap;
+  margin-bottom: 16px;
+
+  &__item {
+    text-decoration: none;
+
+
+    &:last-child {
+      cursor: default;
+      pointer-events: none;
+      text-decoration: none;
+      color: #615340;
+    }
+
+    &:not(:last-child) {
+      color: $c-primary-text;
+      @include link-hover;
+
+      &::after {
+        content: '>';
+        display: inline-block;
+        margin-left: 6px;
+      }
+    }
+  }
+}
