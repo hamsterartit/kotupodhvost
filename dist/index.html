@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>title</title>
+    <meta name="description" content="описание не длиннее 155 символов">
+    <meta name="keywords" content="мета-теги, шаблон, html, css">
+
+    <!-- Контролирует поведение поисковых систем при индексации страницы -->
+    <meta name="robots" content="index,follow,noodp"><!-- Все поисковые системы -->
+    <meta name="googlebot" content="index,follow"><!-- Указание отдельно для Google -->
+
+    <!-- Позволяет указать Google не показывать в поисковой выдаче поле для поиска по сайту -->
+    <meta name="google" content="nositelinkssearchbox"><!-- Позволяет указать Google не предлагать перевести эту страницу -->
+    <meta name="google" content="notranslate"><!-- Подтверждает авторство страницы в Google Search Console -->
+    <meta name="google-site-verification" content="verification_token"> <!-- Тег указания ПО, которое сгенерировало эту страницу -->
+    <meta name="generator" content="program"><!-- Короткое описание тематики вашего сайта -->
+    <meta name="subject" content="тематика вашего сайта"><!-- open graph Facebook-->
+    <meta content="Заголовок">
+    <meta content="website">
+
+    <!-- если сайт многоязычный -->
+    <!-- <meta property="og:locale" content="ru_RU"> -->
+    <meta content="http://localhost.my">
+
+    <!-- не меньше 600х315, не более 8Мб -->
+    <meta content="http://localhost.my/img/og_cover.jpg">
+    <meta content="описание не длиннее 155 символов">
+    <meta content="Facebook ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ник_компании_в_твиттере">
+    <meta name="twitter:title" content="Заголовок">
+    <meta name="twitter:description" content="описание не длиннее 155 символов">
+    <meta name="twitter:creator" content="@ник_в_твиттере">
+
+    <!-- картинка не меньше 280х150, не более 1Мб -->
+    <meta name="twitter:image" content="http://localhost.my/img/tw_cover.jpg">
+
+    <!-- G+ / Pinterest -->
+    <meta content="Заголовок">
+    <meta content="описание не длиннее 155 символов">
+    <meta content="http://localhost.my/img/g_cover.jpg">
+
+    <!-- Google authorship -->
+    <link rel="author" href="https://plus.google.com/[Google+_Profile]/posts" data-mce-href="https://plus.google.com/[Google+_Profile]/posts">
+    <link rel="publisher" href="https://plus.google.com/[Google+_Page_Profile]" data-mce-href="https://plus.google.com/[Google+_Page_Profile]">
+
+    <link rel="stylesheet" type="text/css" href="styles/css/styles.min.css">
+    <link rel="apple-touch-icon" sizes="x" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__inner container">
+        <a href="" class="logo">
+            <img src="styles/img/logo.svg" alt="КОТУ ПОД ХВОСТ - Бентонитовый комкующийся наполнитель">
+        </a>
+        <div class="header__nav js-nav-body">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <button class="nav__link" data-scroll=".about">Наполнитель</button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__link" data-scroll=".package">Упаковка</button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__link" data-scroll=".map">Купить</button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__link" data-scroll=".cooperation">Сотрудничество</button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__link" data-scroll=".shelters">Приюты</button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__link" data-scroll=".feedback">Отзывы</button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__contacts">
+                <a href="tel:88004585855" class="contact-link">8 800 458 58 55</a>
+                <p class="header__mobile">443011, Самара, ул.Советской Армии,
+                    д. 238А, к. 22</p>
+            </div>
+            <div class="header__contacts header__mobile">
+                <div class="social">
+                    <h4 class="social__title text-center">Присоединяйтесь к нам в соц.сетях</h4>
+                    <div class="social__items">
+                        <a href="" class="social__link ibg">
+                            <img src="styles/img/fb.svg" alt="Facebook">
+                        </a>
+                        <a href="" class="social__link ibg">
+                            <img src="styles/img/vk.svg" alt="Vkontakte">
+                        </a>
+                        <a href="" class="social__link ibg">
+                            <img src="styles/img/inst.svg" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="menu-btn ibg js-nav-btn">
+            <img class="menu-btn__open" src="styles/img/menu-btn-open.svg" alt="menu open button">
+            <img class="menu-btn__close" src="styles/img/menu-btn-close.svg" alt="menu close button">
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="banner">
+    <div class="banner__inner container">
+        <img class="banner__img fade-in delay-2 in-view-watcher" src="styles/img/logo-large.svg" alt="КОТУ ПОД ХВОСТ - Бентонитовый комкующийся наполнитель">
+        <h1 class="banner__title banner__above">Бентонитовый комкующийся <br> наполнитель</h1>
+        <button class="btn banner__above">Купить не глядя</button>
+        <div class="banner__media ibg">
+            <img class="fade-in in-view-watcher delay-1" src="styles/img/banner-cat.png" alt="">
+            <div class="banner__bubble-1 fade-in in-view-watcher delay-3">Это не деньги
+                на ветер</div>
+            <div class="banner__bubble-2 fade-in in-view-watcher delay-4">ЭТО экономия, удобство
+                и эстетика!</div>
+        </div>
+    </div>
+</section>
+    <section class="section about">
+    <div class="container">
+        <div class="section__heading section__heading--full">
+        <h2 class="section__title">Однозначно, да!</h2>
+        </div>
+        <div class="about__inner">
+            <div class="about__info">
+                <p>Наполнитель из бентонитовой глины, добываемой
+                    в Кинельском районе Самарской области производственной компанией «Недра-Ресурс».</p>
+                <p><b>Создает комфортную жизнь кошкам и их владельцам.</b> Спрессованные гранулы поглощают
+                    влагу и нейтрализуют «ароматы». Плотный комочек удобно удаляется лопаткой.</p>
+                <p>Питомцы считают такой наполнитель максимально приближенным к природе и с удовольствием
+                    в нём копаются.</p>
+            </div>
+            <div class="about__advantages">
+                <div class="about__package fade-in-right in-view-watcher delay-1">
+                    <img src="styles/img/package.png" alt="">
+                </div>
+                <ul class="custom-list fade-in-right in-view-watcher delay-2">
+                    <li class="custom-list__item">Удобно нести до дома</li>
+                    <li class="custom-list__item">Легко открывать</li>
+                    <li class="custom-list__item">Не вызывает аллергии</li>
+                    <li class="custom-list__item">Стильно дополняет интерьер</li>
+                    <li class="custom-list__item">Не разносится на лапах</li>
+                    <li class="custom-list__item">Экономичный расход</li>
+                </ul>
+            </div>
+        </div>
+        <div class="about__cat-bubble">
+            <img class="fade-in in-view-watcher delay-3" src="styles/img/about-cat.png" alt="">
+            <div class="about__bubble fade-in in-view-watcher delay-4">НУ ЧТО ТЫ СМОТРИШЬ?!
+                УЖЕ ДАЖЕ МНЕ ПОНЯТНО,
+                ЧТО НАДО БРАТЬ!
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="section package">
+    <div class="container">
+        <div class="section__heading">
+            <h2 class="section__title">Стильная упаковка
+                для современного интерьера</h2>
+            <p class="section__subtitle">Стильный дизайн пакета для наполнителя «КОТУ ПОД ХВОСТ» наши покупатели
+                называют «современным искусством». Упаковка, как модный аксессуар, вписывается в современный
+                интерьер ванной комнаты.</p>
+        </div>
+        <div class="difference-slider">
+            <div class="js-img-compare">
+                <div style="display: none;">
+                    <img src="img/without-package.jpg" alt="Before">
+                </div>
+                <div>
+                    <img src="img/with-package.jpg" alt="After">
+                </div>
+            </div>
+            <div class="difference-slider__info">
+                Крафтово-черный цвет без слов рассказывает о безупречном вкусе хозяина.
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="section about-package">
+    <div class="container">
+        <div class="section__heading">
+            <h3 class="section__title">Береги шерсть смолоду,
+                а деньги — всегда!</h3>
+        </div>
+        <div class="about-package__inner">
+            <div class="about-package__info">
+                <p>Мы выпускаем наполнитель с тремя размерами гранул:</p>
+                <ul>
+                    <li>для котят;</li>
+                    <li>универсальные;</li>
+                    <li>для длинношерстных кошек.</li>
+                </ul>
+                <p>Это обеспечивает комфорт животному и <b>не позволяет ему растаскивать наполнитель в своей «шубе»</b>, а
+                    значит экономит ваше время на уборку квартиры.</p>
+                <p>Наполнитель «Коту под хвост» выпускается объемом 15 кг,
+                    10 кг, 5 кг, 3 кг. <b>Чем больше упаковка, тем выгоднее цена.</b>
+                    Купи 15 кг и радуй питомца два месяца!</p>
+                <img src="styles/img/packages.svg" alt="">
+            </div>
+            <div class="about-package__img">
+                <img class="fade-in-right in-view-watcher delay-1" src="styles/img/cat.png" alt="">
+                <div class="about-package__bubble-1 fade-in in-view-watcher delay-2">СМОТРИ!
+                    ДАЖЕ НИЧЕГО
+                    НЕ ПРИЛИПЛО!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="section map">
+    <div class="container">
+        <div class="section__heading">
+            <h3 class="section__title">Где купить?</h3>
+        </div>
+        <div class="map__box">
+            <div class="map__holder" id="map"></div>
+            <div class="map__balloon">
+                <div>443011, г.Самара, ул.Советской Армии, д. 238А, к. 22</div>
+                <div class="map__links">
+                    <a href="tel:88004585855">8 800 458 58 55</a>
+                    <div class="map__divider"></div>
+                    <a href="mailto:kotupodkhvost@mail.ru">kotupodkhvost@mail.ru</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="section cooperation">
+    <div class="container">
+        <div class="section__heading">
+            <h3 class="section__title">С чуткостью к интересам партнеров</h3>
+        </div>
+        <div class="cooperation__inner">
+            <div class="cooperation__info">
+                <p><b>
+                    Мы сотрудничаем с оптовыми покупателями
+                    и дистрибьюторами.
+                </b> Отправляем продукцию в
+                    любой
+                    регион России.
+                </p>
+                <p>Работать с нами выгодно! Мы вкладываемся в рекламу, упаковку и продвижение продукта.
+                    Участвуем
+                    в совместных акциях, проектах, благотворительных кампаниях. Предлагаем <b>
+                        скидки и
+                        специальные программы.
+                    </b></p>
+                <div class="cooperation__img">
+                    <img class="fade-in-left in-view-watcher delay-1" src="styles/img/cat2.png" alt="">
+                    <div class="cooperation__bubble fade-in in-view-watcher delay-2">НУ-КА, ЧТО ТАМ ПРО ПИТОМНИКИ НАПИСАНО?</div>
+                </div>
+            </div>
+            <div class="cooperation__tabs">
+                <div class="tabs">
+                    <div class="tabs__btns">
+                        <button class="tabs__btn active js-tab-btn" id="1">Ритейлерам
+                            интересно</button>
+                        <button class="tabs__btn js-tab-btn" id="2">Зоомагазинам
+                            выгодно</button>
+                        <button class="tabs__btn js-tab-btn" id="3">Питомникам
+                            безопасно</button>
+                        <button class="tabs__btn js-tab-btn" id="4">Оптовикам
+                            надежно</button>
+                        <button class="tabs__btn js-tab-btn" id="5">Маркетплейсам
+                            прикольно</button>
+                    </div>
+                    <div class="tabs__content active js-tab-content" data-content-tab="1">
+                        <h3 class="tabs__title">Ритейлерам интересно</h3>
+                        <ul>
+                            <li>Гарантируем большой объем поставок.</li>
+                            <li> Клиенты приходят в сеть повторно из-за высокого качества продукта.</li>
+                            <li> Конкурентная цена наполнителя.</li>
+                            <li>Яркая упаковка.</li>
+                            <li>Предоставляем образцы такого же качества, как и вся продукция.</li>
+                            <li>Не допускаем «вымывания» продукта с полок — за этим следит отдельный специалист.</li>
+                        </ul>
+                        <a href="" class="btn tabs__link">Скачать презентацию</a>
+                    </div>
+                    <div class="tabs__content js-tab-content" data-content-tab="2">
+                        <h3 class="tabs__title">Зоомагазинам выгодно</h3>
+                        <ul>
+                            <li>Предлагаем продукт дешевле, чем в гипермаркете.</li>
+                            <li>Обеспечиваем за счет высокого качество стабильный спрос на наполнитель в любое время года.</li>
+                            <li>Способствуем рентабельности малого и среднего бизнеса.</li>
+                            <li>Обеспечиваем правильно подобранный ассортимент качественной продукции.</li>
+                        </ul>
+                        <a href="" class="btn tabs__link">Скачать презентацию</a>
+                    </div>
+                    <div class="tabs__content js-tab-content" data-content-tab="3">
+                        <h3 class="tabs__title">Зоомагазинам выгодно</h3>
+                        <ul>
+                            <li>Предлагаем продукт дешевле, чем в гипермаркете.</li>
+                            <li>Обеспечиваем за счет высокого качество стабильный спрос на наполнитель в любое время года.</li>
+                            <li>Способствуем рентабельности малого и среднего бизнеса.</li>
+                            <li>Обеспечиваем правильно подобранный ассортимент качественной продукции.</li>
+                        </ul>
+                        <a href="" class="btn tabs__link">Скачать презентацию</a>
+                    </div>
+                    <div class="tabs__content js-tab-content" data-content-tab="4">
+                        <h3 class="tabs__title">Зоомагазинам выгодно</h3>
+                        <ul>
+                            <li>Предлагаем продукт дешевле, чем в гипермаркете.</li>
+                            <li>Обеспечиваем за счет высокого качество стабильный спрос на наполнитель в любое время года.</li>
+                            <li>Способствуем рентабельности малого и среднего бизнеса.</li>
+                            <li>Обеспечиваем правильно подобранный ассортимент качественной продукции.</li>
+                        </ul>
+                        <a href="" class="btn tabs__link">Скачать презентацию</a>
+                    </div>
+                    <div class="tabs__content js-tab-content" data-content-tab="5">
+                        <h3 class="tabs__title">Зоомагазинам выгодно</h3>
+                        <ul>
+                            <li>Предлагаем продукт дешевле, чем в гипермаркете.</li>
+                            <li>Обеспечиваем за счет высокого качество стабильный спрос на наполнитель в любое время года.</li>
+                            <li>Способствуем рентабельности малого и среднего бизнеса.</li>
+                            <li>Обеспечиваем правильно подобранный ассортимент качественной продукции.</li>
+                        </ul>
+                        <a href="" class="btn tabs__link">Скачать презентацию</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cooperation__img-mobile">
+                <img class="fade-in-left in-view-watcher delay-1" src="styles/img/cat3.png" alt="">
+                <div class="cooperation__bubble-mobile fade-in in-view-watcher delay-2">НУ-КА, ЧТО ТАМ ПРО ПИТОМНИКИ НАПИСАНО?</div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="section about-package shelters">
+    <div class="container">
+        <div class="section__heading section__heading--full">
+            <h3 class="section__title">Хочешь помогать животным,
+                но не знаешь как? Рассказываем</h3>
+        </div>
+        <div class="about-package__inner">
+            <div class="about-package__info">
+                <p><b>
+                    Выбирая наполнитель «КОТУ ПОД ХВОСТ»,
+                </b>
+                    ты вместе с нами участвуешь в благородном деле — помогаешь бездомным животным.</p>
+
+                <p>Часть вырученных средств мы вкладываем
+                    в поставку 15-килограммовых упаковок наполнителя <b>в приюты для бездомных животных.</b></p>
+                <h3>Маленькая помощь лучше большого сочувствия!</h3>
+            </div>
+            <div class="about-package__img about-package__img--hide-on-mobile">
+                <img class="fade-in-right in-view-watcher delay-1" src="styles/img/cat4.png" alt="">
+                <div class="about-package__bubble-2 fade-in in-view-watcher delay-2">хозяин!
+                    я знаю, где нам взять еще одного кота!
+                </div>
+                <div class="about-package__bubble-3 fade-in in-view-watcher delay-3">мне нужен соратник! срочно! </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-package__slider swiper js-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide logo-slide">
+                <img src="img/image.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/Logo-Priut63-4.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/mainlogo.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/image.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/Logo-Priut63-4.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/mainlogo.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/image.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/Logo-Priut63-4.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/mainlogo.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/image.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/Logo-Priut63-4.png" alt="">
+            </div>
+            <div class="swiper-slide logo-slide">
+                <img src="img/mainlogo.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="about-package__img about-package__img--hide-on-desktop">
+        <img class="fade-in-right in-view-watcher delay-1" src="styles/img/cat4.png" alt="">
+        <div class="about-package__bubble-2 fade-in in-view-watcher delay-2">хозяин!
+            я знаю, где нам взять еще одного кота!
+        </div>
+        <div class="about-package__bubble-3 fade-in in-view-watcher delay-3">мне нужен соратник! срочно! </div>
+    </div>
+</section>
+    <section class="section feedback">
+    <div class="container">
+        <div class="section__heading section__heading--full">
+            <h3 class="section__title">Люди говорят</h3>
+        </div>
+    </div>
+    <div class="about-package__slider swiper js-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide feedback-slide">
+                <div class="feedback-slide__header">
+                    <div class="feedback-slide__avatar">
+                        <img src="img/avatar1.jpg" alt="">
+                    </div>
+                    <div>
+                        <h5 class="feedback-slide__title">Марина, 24 года</h5>
+                        <img class="feedback-slide__social" src="img/instagram.svg" alt="">
+                    </div>
+                </div>
+                <p>
+                    Котенка купила случайно, по дороге домой с работы. Такой жалкий и с большими глазами, не смогла
+                    пройти мимо! Надо было срочно решать вопрос с туалетом. Купить наполнитель «Коту под хвост»
+                    посоветовали в зоомагазине. Он хорошо впитывает жидкость и поглощает запахи. Комочки гранулы очень
+                    просто удаляются. Самое главное, что наполнитель не вредит нежным лапкам маленького питомца. Котенок
+                    в первый день понял, где ему нужно справлять свои хозяйственные
+                    дела. А еще оказалось, что стоимость наполнителя вполне демократична.
+                </p>
+            </div>
+            <div class="swiper-slide feedback-slide">
+                <div class="feedback-slide__header">
+                    <div class="feedback-slide__avatar">
+                        <img src="img/avatar2.jpg" alt="">
+                    </div>
+                    <div>
+                        <h5 class="feedback-slide__title">Ольга, 49 лет</h5>
+                        <img class="feedback-slide__social" src="img/instagram.svg" alt="">
+                    </div>
+                </div>
+                <p>
+                    С детства люблю животных. Спасала кошек и собак, приносила их домой с улицы даже тогда, когда сама была школьницей. Использовала множество наполнителей для лотка, пока не остановилась на бентонитовом. Бентонит — природная глина. Мне нравится, что наполнитель не имеет собственного запаха и отлично поглощает запах питомца. Нашей красавице 7 лет.
+                    Британская короткошерстная, привередливая ко всему окружающему.
+                    А вот к лотку у нее претензий нет.
+                </p>
+            </div>
+            <div class="swiper-slide feedback-slide">
+                <div class="feedback-slide__header">
+                    <div class="feedback-slide__avatar">
+                        <img src="img/avatar3.jpg" alt="">
+                    </div>
+                    <div>
+                        <h5 class="feedback-slide__title">Валерий, 64 года</h5>
+                        <img class="feedback-slide__social" src="img/vk.svg" alt="">
+                    </div>
+                </div>
+                <p>
+                    У меня свой бизнес – несколько зоомагазинов в Ульяновске. В первую очередь рассматриваю на должность продавцов-консультантов людей с образованием ветеринара, считая это
+                    конкурентным преимуществом. Мои продавцы прямо повеселели, когда стали торговать наполнителем «Коту под хвост». Во-первых, качество. Клиент возвращается за товаром вновь. Во-вторых, упаковка: красивая и удобная. В третьих, они, как никто, понимают, насколько самим
+                    животным безопасно пользоваться наполнителем.
+                </p>
+            </div>
+            <div class="swiper-slide feedback-slide">
+                <div class="feedback-slide__header">
+                    <div class="feedback-slide__avatar">
+                        <img src="img/avatar1.jpg" alt="">
+                    </div>
+                    <div>
+                        <h5 class="feedback-slide__title">Марина, 24 года</h5>
+                        <img class="feedback-slide__social" src="img/instagram.svg" alt="">
+                    </div>
+                </div>
+                <p>
+                    Котенка купила случайно, по дороге домой с работы. Такой жалкий и с большими глазами, не смогла
+                    пройти мимо! Надо было срочно решать вопрос с туалетом. Купить наполнитель «Коту под хвост»
+                    посоветовали в зоомагазине. Он хорошо впитывает жидкость и поглощает запахи. Комочки гранулы очень
+                    просто удаляются. Самое главное, что наполнитель не вредит нежным лапкам маленького питомца. Котенок
+                    в первый день понял, где ему нужно справлять свои хозяйственные
+                    дела. А еще оказалось, что стоимость наполнителя вполне демократична.
+                </p>
+            </div>
+            <div class="swiper-slide feedback-slide">
+                <div class="feedback-slide__header">
+                    <div class="feedback-slide__avatar">
+                        <img src="img/avatar2.jpg" alt="">
+                    </div>
+                    <div>
+                        <h5 class="feedback-slide__title">Ольга, 49 лет</h5>
+                        <img class="feedback-slide__social" src="img/instagram.svg" alt="">
+                    </div>
+                </div>
+                <p>
+                    С детства люблю животных. Спасала кошек и собак, приносила их домой с улицы даже тогда, когда сама была школьницей. Использовала множество наполнителей для лотка, пока не остановилась на бентонитовом. Бентонит — природная глина. Мне нравится, что наполнитель не имеет собственного запаха и отлично поглощает запах питомца. Нашей красавице 7 лет.
+                    Британская короткошерстная, привередливая ко всему окружающему.
+                    А вот к лотку у нее претензий нет.
+                </p>
+            </div>
+            <div class="swiper-slide feedback-slide">
+                <div class="feedback-slide__header">
+                    <div class="feedback-slide__avatar">
+                        <img src="img/avatar3.jpg" alt="">
+                    </div>
+                    <div>
+                        <h5 class="feedback-slide__title">Валерий, 64 года</h5>
+                        <img class="feedback-slide__social" src="img/vk.svg" alt="">
+                    </div>
+                </div>
+                <p>
+                    У меня свой бизнес – несколько зоомагазинов в Ульяновске. В первую очередь рассматриваю на должность продавцов-консультантов людей с образованием ветеринара, считая это
+                    конкурентным преимуществом. Мои продавцы прямо повеселели, когда стали торговать наполнителем «Коту под хвост». Во-первых, качество. Клиент возвращается за товаром вновь. Во-вторых, упаковка: красивая и удобная. В третьих, они, как никто, понимают, насколько самим
+                    животным безопасно пользоваться наполнителем.
+                </p>
+            </div>
+            <div class="swiper-slide feedback-slide">
+                <div class="feedback-slide__header">
+                    <div class="feedback-slide__avatar">
+                        <img src="img/avatar1.jpg" alt="">
+                    </div>
+                    <div>
+                        <h5 class="feedback-slide__title">Марина, 24 года</h5>
+                        <img class="feedback-slide__social" src="img/instagram.svg" alt="">
+                    </div>
+                </div>
+                <p>
+                    Котенка купила случайно, по дороге домой с работы. Такой жалкий и с большими глазами, не смогла
+                    пройти мимо! Надо было срочно решать вопрос с туалетом. Купить наполнитель «Коту под хвост»
+                    посоветовали в зоомагазине. Он хорошо впитывает жидкость и поглощает запахи. Комочки гранулы очень
+                    просто удаляются. Самое главное, что наполнитель не вредит нежным лапкам маленького питомца. Котенок
+                    в первый день понял, где ему нужно справлять свои хозяйственные
+                    дела. А еще оказалось, что стоимость наполнителя вполне демократична.
+                </p>
+            </div>
+            <div class="swiper-slide feedback-slide">
+                <div class="feedback-slide__header">
+                    <div class="feedback-slide__avatar">
+                        <img src="img/avatar2.jpg" alt="">
+                    </div>
+                    <div>
+                        <h5 class="feedback-slide__title">Ольга, 49 лет</h5>
+                        <img class="feedback-slide__social" src="img/instagram.svg" alt="">
+                    </div>
+                </div>
+                <p>
+                    С детства люблю животных. Спасала кошек и собак, приносила их домой с улицы даже тогда, когда сама была школьницей. Использовала множество наполнителей для лотка, пока не остановилась на бентонитовом. Бентонит — природная глина. Мне нравится, что наполнитель не имеет собственного запаха и отлично поглощает запах питомца. Нашей красавице 7 лет.
+                    Британская короткошерстная, привередливая ко всему окружающему.
+                    А вот к лотку у нее претензий нет.
+                </p>
+            </div>
+            <div class="swiper-slide feedback-slide">
+                <div class="feedback-slide__header">
+                    <div class="feedback-slide__avatar">
+                        <img src="img/avatar3.jpg" alt="">
+                    </div>
+                    <div>
+                        <h5 class="feedback-slide__title">Валерий, 64 года</h5>
+                        <img class="feedback-slide__social" src="img/vk.svg" alt="">
+                    </div>
+                </div>
+                <p>
+                    У меня свой бизнес – несколько зоомагазинов в Ульяновске. В первую очередь рассматриваю на должность продавцов-консультантов людей с образованием ветеринара, считая это
+                    конкурентным преимуществом. Мои продавцы прямо повеселели, когда стали торговать наполнителем «Коту под хвост». Во-первых, качество. Клиент возвращается за товаром вновь. Во-вторых, упаковка: красивая и удобная. В третьих, они, как никто, понимают, насколько самим
+                    животным безопасно пользоваться наполнителем.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="section form-section">
+    <div class="container">
+        <div class="form-box js-form-box">
+            <div class="form__inner">
+                <h3 class="form-box__title">Остались вопросы?</h3>
+                <h3 class="form-box__title">Задавай, не стесняйся</h3>
+                <p class="form-box__subtitle">Заполни короткую форму и мы перезвоним в течение 15 минут</p>
+                <form class="form">
+                    <div class="form__field field">
+                        <label class="field__label">Имя</label>
+                        <div class="field__holder">
+                            <input class="field__input" type="text" placeholder="Укажите ваше имя">
+                        </div>
+                    </div>
+                    <div class="form__field field field--required">
+                        <label class="field__label">Телефон</label>
+                        <div class="field__holder">
+                            <input class="field__input js-phone-field" type="text" placeholder="+7 - _ _ _ - _ _ _ - _ _ - _ _ "
+                                   required>
+                        </div>
+                    </div>
+                    <div class="form__check">
+                        <label for="checkbox" class="check">
+                            <input type="checkbox" id="checkbox" class="check__input" required>
+                            <span class="check__box"></span>
+                            <span class="check__lbl">Согласие не обработку <a href="">персональных данных</a></span>
+                        </label>
+                    </div>
+                    <button class="btn btn--full form__btn js-submit" type="submit">Задать вопрос</button>
+                </form>
+            </div>
+            <div class="form-box__img">
+                <img class="fade-in in-view-watcher delay-1" src="styles/img/form-cat.png" alt="">
+                <div class="form-box__bubble-1 fade-in in-view-watcher delay-2">
+                    ОТ МЕНЯ ТАК ПРОСТО НЕ СПРЯЧЕШЬСЯ!
+                </div>
+            </div>
+        </div>
+        <div class="form-box hidden js-form-message-box">
+            <div class="form__inner">
+                <h3 class="form-box__title">Спасибо!</h3>
+                <h3 class="form-box__title">Ваша заявка принята.</h3>
+                <p class="form-box__subtitle">Наш менеджер свяжется с Вами для подтверждения заказа</p>
+            </div>
+            <div class="form-box__img">
+                <img src="styles/img/form-cat2.png" alt="">
+                <div class="form-box__bubble-2">
+                    ВОТ И УМНИЧКА!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__col footer__col--mobile">
+                <a href="" class="footer-logo">
+                    <img src="styles/img/logo.svg" alt="КОТУ ПОД ХВОСТ - Бентонитовый комкующийся наполнитель">
+                </a>
+                <div class="footer__social">
+                    <div class="social">
+                        <h4 class="social__title">Присоединяйтесь к нам в соц.сетях</h4>
+                        <div class="social__items">
+                            <a href="" class="social__link ibg">
+                                <img src="styles/img/fb.svg" alt="Facebook">
+                            </a>
+                            <a href="" class="social__link ibg">
+                                <img src="styles/img/vk.svg" alt="Vkontakte">
+                            </a>
+                            <a href="" class="social__link ibg">
+                                <img src="styles/img/inst.svg" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__col footer__col--mobile">
+                <a href="tel:88004585855" class="contact-link">8 800 458 58 55</a>
+                <p class="footer__address">443011, Самара, ул.Советской Армии,
+                    д. 238А, к. 22</p>
+            </div>
+            <div class="footer__col footer__col--mobile-nav">
+                <button class="footer__link" data-scroll=".about">Наполнитель</button>
+                <button class="footer__link" data-scroll=".package">Упаковка</button>
+                <button class="footer__link" data-scroll=".map">Купить</button>
+            </div>
+            <div class="footer__col footer__col--mobile-nav">
+                <button class="footer__link" data-scroll=".cooperation">Сотрудничество</button>
+                <button class="footer__link" data-scroll=".shelters">Приюты</button>
+                <button class="footer__link" data-scroll=".feedback">Отзывы</button>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div>© 2021 Коту под хвост</div>
+            <a href="" class="copyright-link">Политика конфиденциальности</a>
+            <div class="copyright">Сделано с любовью<br>
+                в <a href="">PARUS AGENCY</a></div>
+        </div>
+    </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=db328270-45f9-4de2-868d-3e3379595548"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+</html>

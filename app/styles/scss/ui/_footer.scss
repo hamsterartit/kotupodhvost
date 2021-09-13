@@ -1,0 +1,151 @@
+.footer {
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 24px;
+  font-size: rem(16);
+  color: $c-footer-link;
+  text-align: center;
+
+  @include for-size(tablet-portrait-up) {
+    text-align: initial;
+    padding-top: 40px;
+    font-size: rem(18);
+  }
+
+  &:before {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 20%;
+    top: 0;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(41, 29, 14, 0.3) 0%, rgba(213, 165, 107, 0) 70%, rgba(213, 165, 107, 0) 100%);
+  }
+
+  &__address {
+    margin-bottom: 0;
+    font-size: rem(18);
+
+    @include for-size(tablet-portrait-up) {
+      font-size: rem(20);
+    }
+  }
+
+  &__inner {
+    @include for-size(tablet-portrait-up) {
+      padding-bottom: 8px;
+      @include flex(flex, null, space-between);
+    }
+  }
+
+  &__col {
+    position: relative;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include for-size(tablet-portrait-up) {
+      width: 20%;
+    }
+
+    &--mobile {
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 220px;
+        height: 1px;
+        background-color: #886C46;
+
+        @include for-size(tablet-portrait-up) {
+          display: none;
+        }
+      }
+    }
+
+    &--mobile-nav{
+      padding-bottom: 0;
+
+      + .footer__col--mobile-nav {
+        padding-top: 16px;
+        padding-bottom: 24px;
+
+        @include for-size(tablet-portrait-up) {
+          padding-top: 24px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: $c-footer-link;
+    text-decoration: none;
+    font-size: rem(22);
+    display: block;
+
+    @include for-size(tablet-portrait-up) {
+      font-size: rem(24);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include for-size(tablet-portrait-up) {
+        margin-bottom: 32px;
+      }
+    }
+
+    @include link-hover;
+  }
+
+  &__bottom {
+    padding-top: 32px;
+    position: relative;
+
+    @include for-size(tablet-portrait-up) {
+      @include flex(flex, null, space-between);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 220px;
+      height: 1px;
+      background-color: #886C46;
+
+      @include for-size(tablet-portrait-up) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.copyright-link {
+  color: #615340;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: block;
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @include link-hover;
+}
+
+.copyright {
+  color: #615340;
+
+  a {
+    color: $c-footer-link;
+    text-decoration: none;
+    font-weight: 700;
+
+    @include link-hover;
+  }
+}

@@ -3,6 +3,8 @@ import "./hammer";
 import "./jquery.images-compare.min";
 import IMask from 'imask';
 
+import animate from './animate';
+
 $(document).ready(function () {
     /* Is in view */
     let watchedElements = [];
@@ -94,6 +96,28 @@ $(document).ready(function () {
         e.preventDefault();
         $('.js-form-box').addClass('hidden');
         $('.js-form-message-box').removeClass('hidden');
+    });
+
+    /* Scroll to */
+    $("body").on("click", "[data-scroll]", (e) => {
+        e.preventDefault();
+        const $link = $(e.currentTarget);
+        let index = $link.data("scrollIndex");
+        if (index === undefined) {
+            index = 0;
+        }
+        $(".js-nav-btn").removeClass("active");
+        $(".js-nav-body").removeClass("active");
+        $("body").removeClass("locked");
+        const $el = $($link.data('scroll')).eq(index);
+        $('html, body').animate(
+            {
+                scrollTop: $el.offset().top - ($(window).height() * 10) / 100,
+            },
+            {
+                duration: animate.duration.effect,
+            }
+        );
     });
 
     /* Map */

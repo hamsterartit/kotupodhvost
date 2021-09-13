@@ -8,6 +8,12 @@ a {
   text-decoration: none;
   font-weight: 500;
 
+  .footer & {
+    color: $c-footer-link;
+    display: block;
+    margin-bottom: 30px;
+  }
+
   @include for-size(tablet-portrait-up) {
     font-size: rem(24);
   }
