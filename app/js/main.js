@@ -72,7 +72,9 @@ $(document).ready(function () {
     /* Slider */
     new Swiper(".js-slider", {
         spaceBetween: 16,
+        centeredSlides: true,
         slidesPerView: "auto",
+        loop: true,
         autoplay: {
             delay: 2000,
             disableOnInteraction: false,
