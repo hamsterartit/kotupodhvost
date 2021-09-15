@@ -96,8 +96,10 @@ $(document).ready(function () {
     /* Form */
     $('.js-submit').click(function (e) {
         e.preventDefault();
-        $('.js-form-box').addClass('hidden');
-        $('.js-form-message-box').removeClass('hidden');
+        if($("#checkbox").is(':checked') && $(".js-phone-field").val().length) {
+            $('.js-form-box').addClass("hidden");
+            $('.js-form-message-box').removeClass("hidden");
+        }
     });
 
     /* Scroll to */
