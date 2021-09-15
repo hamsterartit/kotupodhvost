@@ -4,6 +4,14 @@
   @include for-size(tablet-portrait-up) {
     padding-bottom: 120px;
   }
+
+  &__slider {
+    margin-top: 48px;
+
+    @include for-size(tablet-portrait-up) {
+      margin-top: 80px;
+    }
+  }
 }
 
 .feedback-slide {

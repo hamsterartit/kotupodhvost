@@ -136,7 +136,7 @@
   &__slider {
     margin-top: 48px;
 
-    @include for-size(tablet-portrait-up) {
+    @include for-size(tablet-landscape-up) {
       margin-top: 0;
     }
   }
