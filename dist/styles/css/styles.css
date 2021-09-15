@@ -1538,6 +1538,8 @@ a {
   transform: rotate(-15.86deg);
   padding-left: 15px;
   padding-right: 35px;
+  display: block;
+  padding-top: 35px;
 }
 
 .about-package__bubble-2 {
@@ -2446,8 +2448,9 @@ a {
     right: 55%;
     top: -8%;
     left: auto;
-    padding-left: 25px;
-    padding-right: 55px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 55px 10px 25px;
   }
 
   .about-package__bubble-2 {
