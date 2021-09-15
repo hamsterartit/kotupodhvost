@@ -76,6 +76,8 @@
       right: 27%;
       top: 1%;
       transform: rotate(21.4deg);
+      padding-left: 50px;
+      padding-right: 50px;
     }
 
     @include for-size(tablet-landscape-up) {
