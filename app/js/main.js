@@ -121,21 +121,92 @@ $(document).ready(function () {
     });
 
     /* Map */
-    if($(".map").length) {
+    if ($(".map").length) {
         const place = [53.235687, 50.181100];
         ymaps.ready(function () {
-            const map = new ymaps.Map(
-                "map",
-                {
+            // Создание экземпляра карты и его привязка к созданному контейнеру.
+            const map = new ymaps.Map('map', {
                     center: [53.235059, 50.181564],
                     zoom: 15,
                     controls: [],
-                },
-                {
+                }, {
                     suppressMapOpenBlock: true,
-                }
-            );
+                }),
 
+                // Создание макета балуна на основе Twitter Bootstrap.
+                MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+                    '<div class="map-popover top">' +
+                    '<div class="arrow"></div>' +
+                    '<div class="map-popover__inner">' +
+                    '<div>443011, г.Самара, ул.Советской Армии, д. 238А, к. 22</div>' +
+                    '<div class="map-popover__links">' +
+                    '<a href="tel:88004585855">8 800 458 58 55</a>' +
+                    '<div class="map-popover__divider"></div>' +
+                    '<a href="mailto:kotupodkhvost@mail.ru">kotupodkhvost@mail.ru</a>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>', {
+                        build: function () {
+                            this.constructor.superclass.build.call(this);
+
+                            this._$element = $('.map-popover', this.getParentElement());
+
+                            this.applyElementOffset();
+                        },
+                        clear: function () {
+                            this.constructor.superclass.clear.call(this);
+                        },
+                        onSublayoutSizeChange: function () {
+                            MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
+
+                            if (!this._isElement(this._$element)) {
+                                return;
+                            }
+
+                            this.applyElementOffset();
+
+                            this.events.fire('shapechange');
+                        },
+                        applyElementOffset: function () {
+                            this._$element.css({
+                                left: -(this._$element[0].offsetWidth / 2),
+                                top: -(this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight)
+                            });
+                        },
+                        getShape: function () {
+                            if (!this._isElement(this._$element)) {
+                                return MyBalloonLayout.superclass.getShape.call(this);
+                            }
+
+                            var position = this._$element.position();
+
+                            return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
+                                [position.left, position.top], [
+                                    position.left + this._$element[0].offsetWidth,
+                                    position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
+                                ]
+                            ]));
+                        },
+                        _isElement: function (element) {
+                            return element && element[0] && element.find('.arrow')[0];
+                        }
+                    }),
+
+                MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(),
+
+                myPlacemark = window.myPlacemark = new ymaps.Placemark([53.235687, 50.181100], {
+                    balloonHeader: 'Заголовок балуна',
+                    balloonContent: 'Контент балуна',
+                }, {
+                    iconLayout: "default#image",
+                    iconImageHref: "img/pin.png",
+                    iconImageSize: [72, 72],
+                    balloonShadow: false,
+                    balloonLayout: MyBalloonLayout,
+                    balloonContentLayout: MyBalloonContentLayout,
+                    balloonPanelMaxMapArea: 0,
+                    hideIconOnBalloonOpen: false,
+                });
             map.controls.remove("routeButtonControl");
             map.controls.remove("zoomControl");
             map.controls.remove("geolocationControl");
@@ -145,24 +216,8 @@ $(document).ready(function () {
             map.controls.remove("fullscreenControl");
             map.controls.remove("rulerControl");
             map.behaviors.disable(["scrollZoom"]);
-
-
-            let marker = new ymaps.Placemark(
-                place,
-                {hintContent: ""},
-                {
-                    iconLayout: "default#image",
-                    iconImageHref: "img/pin.png",
-                    iconImageSize: [72, 72],
-                    iconShape: {
-                        type: "Rectangle",
-                        coordinates: [[-25, -25], [25, 25]],
-                    },
-                }
-            );
-
-
-            map.geoObjects.add(marker);
+            map.geoObjects.add(myPlacemark);
+            myPlacemark.balloon.open();
         });
     }
 });
