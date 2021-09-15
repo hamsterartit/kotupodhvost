@@ -1442,6 +1442,7 @@ a {
   text-align: center;
   color: #20161C;
   margin-top: 16px;
+  border-radius: 8px;
 }
 
 .images-compare-separator {
@@ -2633,7 +2634,7 @@ a {
   }
 
   .section__heading {
-    width: 60%;
+    width: 57%;
   }
 
   .section__heading--full {
@@ -2644,6 +2645,11 @@ a {
     font-size: 3.1111111111rem;
     line-height: 3.1111111111rem;
     margin-bottom: 48px;
+  }
+
+  .section__title--custom {
+    display: flex;
+    flex-direction: column;
   }
 
   .section__title--politics {

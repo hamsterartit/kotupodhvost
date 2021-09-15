@@ -43,7 +43,7 @@
 
   &__heading {
     @include for-size(tablet-landscape-up) {
-      width: 60%;
+      width: 57%;
 
       &--full {
         width: 75%;
@@ -61,6 +61,13 @@
       font-size: rem(56);
       line-height: rem(56);
       margin-bottom: 48px;
+    }
+
+    &--custom {
+      @include for-size(tablet-landscape-up) {
+       display: flex;
+        flex-direction: column;
+      }
     }
 
     &--politics {
