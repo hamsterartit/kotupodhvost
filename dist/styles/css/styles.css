@@ -1065,6 +1065,7 @@ a {
 
 .nav {
   flex-grow: 1;
+  padding: 0 8px;
 }
 
 .nav__list {
@@ -1072,7 +1073,7 @@ a {
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
   height: 100%;
 }
@@ -2307,7 +2308,7 @@ a {
   .about {
     padding-top: 80px;
     padding-bottom: 65px;
-    margin-bottom: 100px;
+    margin-bottom: 270px;
   }
 
   .about__info {
@@ -2349,7 +2350,7 @@ a {
   }
 
   .package {
-    padding-top: 215px;
+    padding-top: 45px;
   }
 
   .difference-slider__info {
@@ -2632,6 +2633,7 @@ a {
 
   .logo {
     width: 240px;
+    margin-top: 6px;
   }
 
   .section__heading {
