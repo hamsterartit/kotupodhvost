@@ -114,12 +114,20 @@
   }
 
   &__check {
-    margin-top: 36px;
+    margin-top: 16px;
     display: flex;
+
+    @include for-size(tablet-portrait-up) {
+      margin-top: 36px;
+    }
   }
 
   &__btn {
-    margin-top: 24px;
+    margin-top: 32px;
+
+    @include for-size(tablet-portrait-up) {
+      margin-top: 24px;
+    }
   }
 }
 

@@ -84,6 +84,7 @@
     font-size: rem(22);
     display: block;
     margin: 0 auto;
+    transition: color $animate-duration-effect ease;
 
     @include for-size(tablet-portrait-up) {
       font-size: rem(24);
@@ -142,6 +143,10 @@
 
 .copyright {
   color: #615340;
+
+  @include for-size(tablet-portrait-up) {
+    text-align: right;
+  }
 
   a {
     color: $c-footer-link;

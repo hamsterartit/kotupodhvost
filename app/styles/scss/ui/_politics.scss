@@ -33,11 +33,12 @@
     transform: rotate(2.51deg);
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 10px;
 
     @include for-size(tablet-portrait-up) {
-      top: 3%;
+      top: 1%;
       right: 34%;
-      transform: rotate(-2.51deg);
+      transform: rotate(1.49deg);
     }
   }
 
@@ -47,10 +48,11 @@
     top: 23%;
     left: 54%;
     transform: rotate(2.51deg);
+    padding-bottom: 10px;
 
     @include for-size(tablet-portrait-up) {
-      top: 21%;
-      right: 20%;
+      top: 19%;
+      right: 17%;
       left: auto;
     }
   }
