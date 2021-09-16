@@ -61,9 +61,11 @@
 .politics-box {
   font-size: rem(16);
   line-height: rem(24);
+  margin-top: 48px;
 
   @include for-size(tablet-portrait-up) {
     @include flex(flex, null, space-between);
+    margin-top: 0;
   }
 
   > div {

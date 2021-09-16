@@ -5858,7 +5858,6 @@ $(document).ready(function () {
 
   new Swiper(".js-slider", {
     spaceBetween: 16,
-    centeredSlides: true,
     slidesPerView: "auto",
     loop: true,
     autoplay: {
@@ -5867,7 +5866,8 @@ $(document).ready(function () {
     },
     breakpoints: {
       960: {
-        spaceBetween: 24
+        spaceBetween: 24,
+        centeredSlides: true
       }
     }
   });
@@ -5923,7 +5923,7 @@ $(document).ready(function () {
         suppressMapOpenBlock: true
       }),
           // Создание макета балуна на основе Twitter Bootstrap.
-      MyBalloonLayout = ymaps.templateLayoutFactory.createClass('<div class="map-popover top">' + '<div class="arrow"></div>' + '<div class="map-popover__inner">' + '<div>443011, г.Самара, ул.Советской Армии, д. 238А, к. 22</div>' + '<div class="map-popover__links">' + '<a href="tel:88004585855">8 800 458 58 55</a>' + '<div class="map-popover__divider"></div>' + '<a href="mailto:kotupodkhvost@mail.ru">kotupodkhvost@mail.ru</a>' + '</div>' + '</div>' + '</div>', {
+      MyBalloonLayout = ymaps.templateLayoutFactory.createClass('<div class="map-popover top">' + '<div class="arrow"></div>' + '<div class="map-popover__inner">' + '<div class="map-popover__address"><span>443011, г.Самара,</span> <span>ул.Советской Армии, д. 238А, к. 22</span></div>' + '<div class="map-popover__links">' + '<a href="tel:88004585855">8 800 458 58 55</a>' + '<div class="map-popover__divider"></div>' + '<a href="mailto:kotupodkhvost@mail.ru">kotupodkhvost@mail.ru</a>' + '</div>' + '</div>' + '</div>', {
         build: function build() {
           this.constructor.superclass.build.call(this);
           this._$element = $('.map-popover', this.getParentElement());

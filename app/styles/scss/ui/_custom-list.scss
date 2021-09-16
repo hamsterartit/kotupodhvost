@@ -3,7 +3,11 @@
   flex-direction: column;
   padding-bottom: 20%;
   padding-left: 0;
-  margin-left: -45px;
+  margin-left: -25px;
+
+  @include for-size(tablet-landscape-up) {
+    margin-left: -45px;
+  }
 
   &__item {
     list-style: none;

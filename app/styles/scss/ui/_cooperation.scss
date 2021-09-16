@@ -19,9 +19,11 @@
 
   &__tabs {
     position: relative;
+    margin-top: 48px;
 
     @include for-size(tablet-portrait-up) {
       width: 58%;
+      margin-top: 0;
     }
   }
 

@@ -53,6 +53,15 @@
       font-size: rem(40);
       line-height: rem(56);
     }
+
+    > span {
+      display: block;
+      text-align: center;
+
+      @include for-size(tablet-portrait-up) {
+        display: inline;
+      }
+    }
   }
 
   &__subtitle {
@@ -61,6 +70,15 @@
 
     @include for-size(tablet-landscape-up) {
       margin-bottom: 48px;
+    }
+
+    > span {
+      display: block;
+      text-align: center;
+
+      @include for-size(tablet-portrait-up) {
+        display: inline;
+      }
     }
   }
 

@@ -84,8 +84,20 @@ main p {
   margin-top: 0;
   margin-bottom: 28px;
 
+  @include for-size(tablet-landscape-up) {
+    margin-bottom: 24px;
+  }
+
   + ul {
     margin-top: -28px;
+  }
+}
+
+.swiper-wrapper {
+  padding-left: 16px;
+
+  @include for-size(tablet-portrait-up) {
+    padding-left: 0;
   }
 }
 

@@ -28,6 +28,16 @@
 
     @include for-size(tablet-portrait-up) {
       font-size: rem(20);
+      padding-right: 25px;
+    }
+
+    > span {
+      display: block;
+      text-align: center;
+
+      @include for-size(tablet-portrait-up) {
+        display: inline;
+      }
     }
   }
 
