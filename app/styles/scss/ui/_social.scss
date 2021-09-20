@@ -5,6 +5,16 @@
     font-weight: 400;
     line-height: rem(20);
 
+    > span {
+      display: inline;
+      text-align: center;
+
+      @include for-size(tablet-portrait-up) {
+        display: block;
+        text-align: left;
+      }
+    }
+
     .header & {
       font-size: rem(16);
     }

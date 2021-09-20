@@ -32,11 +32,12 @@
     }
 
     > span {
-      display: block;
+      display: inline;
       text-align: center;
 
       @include for-size(tablet-portrait-up) {
-        display: inline;
+        display: block;
+        text-align: left;
       }
     }
   }

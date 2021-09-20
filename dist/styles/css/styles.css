@@ -841,6 +841,11 @@ a {
   line-height: 1.1111111111rem;
 }
 
+.social__title > span {
+  display: inline;
+  text-align: center;
+}
+
 .header .social__title {
   font-size: 0.8888888889rem;
 }
@@ -1153,7 +1158,7 @@ a {
 }
 
 .footer__address > span {
-  display: block;
+  display: inline;
   text-align: center;
 }
 
@@ -2229,6 +2234,11 @@ a {
     font-size: 1.3333333333rem;
   }
 
+  .social__title > span {
+    display: block;
+    text-align: left;
+  }
+
   .tabs__btns {
     overflow-x: hidden;
   }
@@ -2306,7 +2316,8 @@ a {
   }
 
   .footer__address > span {
-    display: inline;
+    display: block;
+    text-align: left;
   }
 
   .footer__inner {
@@ -2772,7 +2783,7 @@ a {
   }
 
   .section__heading {
-    width: 57%;
+    width: 54%;
   }
 
   .section__heading--full {
